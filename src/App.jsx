@@ -1,5 +1,12 @@
 import { useState } from 'react'
 import './App.css'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import Login from './Login-form/login';
 
 function App() {
 
@@ -21,7 +28,7 @@ const handleClick =  e => setResult(result.concat(e.target.id))
 
   return (
   <div className="calculator">
-    <p>Calculator</p>
+    <p className='text-xls'>Calculator</p>
      <input type="text" value={result} disabled /> 
 
       <div className='buttons'>
@@ -36,7 +43,7 @@ const handleClick =  e => setResult(result.concat(e.target.id))
         <button id='8' className='number' onClick={handleClick}>8</button>
         <button id='9' className='number' onClick={handleClick}>9</button>
 
-        <button id='*' className='operator' onClick={handleClick}>*</button>
+        <button id='*' className='operator' onClick={handleClick}>x</button>
 
 
         <button id='4' className='number' onClick={handleClick}>4</button>
